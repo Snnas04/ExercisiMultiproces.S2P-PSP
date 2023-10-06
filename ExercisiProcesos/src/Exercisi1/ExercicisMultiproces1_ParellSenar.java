@@ -30,7 +30,7 @@ public class ExercicisMultiproces1_ParellSenar {
         scan.close(); // Tanc el sacanner ya que emplei un scanner global per tot, i aixi al moment de tancar també tanc el scanner
     }
 
-    private static String getSon(String[] command, String value) {
+    public static String getSon(String[] command, String value) {
         String read = "";
 
         try {
