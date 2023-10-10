@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: Exercisi2.ExercicisMultiproces2
+Main-Class: Exercisi3.Ex3_Pare
 
