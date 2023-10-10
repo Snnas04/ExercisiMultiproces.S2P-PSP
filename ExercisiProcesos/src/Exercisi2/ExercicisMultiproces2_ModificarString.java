@@ -4,21 +4,27 @@ import java.io.*;
 import java.util.Scanner;
 
 public class ExercicisMultiproces2_ModificarString {
-    public static void main(String[] args) throws IOException {
-        Scanner scan = null;
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // L'usuari introdueix un valor
+        System.out.println("Introduir un texte: ");
         String sortida = scan.nextLine();
 
         String[] command = {
                 "java",
                 "-jar",
                 "out/artifacts/ExercisiProcesos_jar2/ExercisiProcesos.jar",
-                Integer.toString(Integer.parseInt(sortida))
+                String.valueOf(String.valueOf(sortida))
         };
 
-        System.out.println(getSon(command, String.valueOf("Hola")));
+        System.out.println(getSon(command, String.valueOf(scan))); //L'hi envi la sortida per poder fer la
+        // consulta
+
+        scan.close(); // Tanc el sacanner ya que emplei un scanner global per tot, i aixi al moment de tancar també tanc el scanner
     }
 
-    public static String getSon(String[] command, String value) throws IOException {
+    public static String getSon(String[] command, String value) {
         String read = "";
 
         try {
@@ -35,7 +41,7 @@ public class ExercicisMultiproces2_ModificarString {
             try{
                 while((linea = in.readLine()) != null)
                 {
-                    System.out.println(linea);
+                    System.out.println("El pare diu: " + linea);
                 }
                 in.close();
             }catch(IOException ex){
