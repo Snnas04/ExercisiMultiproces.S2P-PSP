@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ex3_Pare {
     public static void main(String[] args) {
-        var missatge = "Yo soy tu padre";
+        String missatge = "Yo soy tu padre";
         String[] command = {
                 "java",
                 "-jar",
@@ -15,13 +15,10 @@ public class Ex3_Pare {
 
         System.out.println(getSon(command, String.valueOf(missatge))); //L'hi envi la sortida per poder fer la
         // consulta
-
-        Ex3_Pare EM = new Ex3_Pare();
-        System.out.println(EM.xatProcessos(String.valueOf(args[0])));
     }
 
     String xatProcessos(String texto) {
-        return "Fill ha enviat: " + texto;
+        return "Pare: rep missatge del fill " + texto;
     }
 
     public static String getSon(String[] command, String value) {
