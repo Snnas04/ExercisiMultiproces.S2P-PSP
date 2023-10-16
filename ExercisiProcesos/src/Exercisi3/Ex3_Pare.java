@@ -12,7 +12,7 @@ public class Ex3_Pare {
                 "out/artifacts/ExercisiProcesos_jar3/ExercisiProcesos.jar",
                 String.valueOf(String.valueOf(missatge))
         };
-f
+
         System.out.println(getSon(command, String.valueOf(missatge))); //L'hi envi la sortida per poder fer la
         // consulta
     }
