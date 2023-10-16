@@ -1,24 +1,20 @@
-package Exercisi3;
+package Exercisi2;
 
 import java.io.*;
 import java.util.Scanner;
 
 public class Ex3_Pare {
     public static void main(String[] args) {
-        String missatge = "Yo soy tu padre";
+        String missatge = "Hola";
+
         String[] command = {
                 "java",
                 "-jar",
-                "out/artifacts/ExercisiProcesos_jar3/ExercisiProcesos.jar",
-                String.valueOf(String.valueOf(missatge))
+                "out/artifacts/ExercisiProcesos_jar2/ExercisiProcesos.jar",
+                String.valueOf((missatge))
         };
 
-        System.out.println(getSon(command, String.valueOf(missatge))); //L'hi envi la sortida per poder fer la
-        // consulta
-    }
-
-    String xatProcessos(String texto) {
-        return "Pare: rep missatge del fill " + texto;
+        System.out.println(getSon(command, missatge)); //L'hi envi la sortida per poder fer la
     }
 
     public static String getSon(String[] command, String value) {
@@ -29,21 +25,7 @@ public class Ex3_Pare {
 
             Process proces = r.exec(command);
 
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(proces.getOutputStream()));
-            BufferedReader in = new BufferedReader(new InputStreamReader(proces.getInputStream()));
-
-            out.write(value);
-            out.close();
-            String linea = null;
-            try{
-                while((linea = in.readLine()) != null)
-                {
-                    System.out.println(linea);
-                }
-                in.close();
-            }catch(IOException ex){
-                System.out.println("Error al mostrar el proces fill");
-            }
+            System.out.println("El pare diu: " + value);
         } catch (IOException ex) {
             System.err.println("Hay un problema por parte del padre a la hora de la comunicacion");
         }
