@@ -1,8 +1,8 @@
-package Exercisi2;
+package Exercisi3;
 
-public class Ex3_Fill {
+public class ExercicisMultiproces3_Missatges {
     public static void main(String[] args) {
-        Ex3_Fill EM = new Ex3_Fill();
+        ExercicisMultiproces3_Missatges EM = new ExercicisMultiproces3_Missatges();
         System.out.println(EM.enviarMS(String.valueOf(args[0])));
     }
 
