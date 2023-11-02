@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Exercisi3.Ex3_Pare
-

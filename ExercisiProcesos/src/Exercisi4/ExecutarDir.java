@@ -22,7 +22,7 @@ public class ExecutarDir
             String userDir = System.getProperty("user.home");
             String desktopDir = userDir + "/Desktop";
 
-            pb = new ProcessBuilder("alacritty", "/home", "ls");
+            pb = new ProcessBuilder("fish", "/home", "ls");
             pb.directory(new File(desktopDir)); // Establecer el directorio del escritorio como directorio de trabajo
             Process p = pb.start(); // Ejecutar el programa a través de un proceso hijo
             mostrarResultat(p, writer);

@@ -7,6 +7,6 @@ public class ExercicisMultiproces3_Missatges {
     }
 
     String enviarMS(String texto) {
-        return "El fill diu: " + texto;
+        return "Fill: rep missatge del pare \"" + texto + "\"";
     }
 }
