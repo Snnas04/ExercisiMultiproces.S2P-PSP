@@ -16,13 +16,11 @@ public class ExercicisMultiproces1_ParellSenar {
                     break;
                 }
 
-                // Ejecutar el programa ExecutarDir para crear el archivo
-                ProcessBuilder dirPB = new ProcessBuilder("java", "src/Exercisi1/ExercicisMultiproces1.java", numIntroduit);
-                dirPB.inheritIO(); // Redirigir la salida estándar al proceso padre
+                ProcessBuilder reposta = new ProcessBuilder("java", "src/Exercisi1/ExercicisMultiproces1.java", numIntroduit);
+                reposta.inheritIO(); // Redirigir la salida estándar al proceso padre
 
-                // Ejecutar ExecutarDir
-                Process dirProcess = dirPB.start();
-                int dirExitCode = dirProcess.waitFor();
+                Process repostaProcess = reposta.start();
+                int direpostaExitCode = repostaProcess.waitFor();
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
